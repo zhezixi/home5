@@ -1,3 +1,5 @@
+
+
 body{
   font-family: 'Raleway', sans-serif; /* Test for this*/
   margin: 0;
@@ -76,6 +78,9 @@ Keyframes for animation*/
   animation-name: logo_wiggle;
   animation-duration: 3s;
   animation-iteration-count: 1;
+  -webkit-animation-name: logo_wiggle;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: 1;
 }
 
 /* Cards! */
@@ -85,7 +90,7 @@ Keyframes for animation*/
   align-items: center;
   justify-content: center;
   flex-wrap:wrap;
-  /*SOMETHING ELSE RELATED TO FLEX DIRECTION NEEDED IN HERE*/
+  /*SOMETHING ELSE ?*/
 
 }
 
@@ -233,6 +238,15 @@ header{
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
+    html{
+    scroll-behavior: auto;
+  }
+  /*remove scroll*/
+
+  a.skip{
+    -webkit-transition: none;
+    transition: none;
+  }
   #logo{
     -webkit-animation: none;
             animation: none;
